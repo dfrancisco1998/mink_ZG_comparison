@@ -6,10 +6,18 @@ This project is useful because it will allow a more accurate quantification of d
 that has not been performed. In doing so, this will illuminate both the strengths and weaknesses of these dimension selection 
 algorithms in such a way that will allow the user to decide which is best to use in their particular circumstance. 
 
-There is one [notebook](https://github.com/dfrancisco1998/mink_ZG_comparison/blob/main/2021-04-28-real-data-minka-zg-comparison.ipynb ) 
-that one could run through if they wanted to.
+# Data
+The data comes from [OpenML-CC18](https://www.openml.org/s/99/data). The data is read in within the [notebook](https://github.com/dfrancisco1998/mink_ZG_comparison/blob/main/2021-04-28-real-data-minka-zg-comparison.ipynb)
 
-Running the notebook in order will produce same results and graphs that are in the [manuscript](https://www.overleaf.com/read/mrgdvkxgkzrs). 
+# Experiment
+In [notebook](https://github.com/dfrancisco1998/mink_ZG_comparison/blob/main/2021-04-28-real-data-minka-zg-comparison.ipynb), the basic experiment is as follows: 
+1. Read in each dataset from [OpenML-CC18](https://www.openml.org/s/99/data)
+2. Perform ZG(1), ZG(1) hack, minka, ZG(2), ZG(2) hack, ZG(3), ZG(3) hack, ZG(4), ZG(4) hack dimension selection 
+3. Using the original data perform PCA on each dataset, and then do LDA classification per dimension (first the first dim only, then the first and second dim only, etc) 
+4. Create plots
+
+# Files
+Running the [notebook](https://github.com/dfrancisco1998/mink_ZG_comparison/blob/main/2021-04-28-real-data-minka-zg-comparison.ipynb )  in order will produce same results and graphs that are in the [manuscript](https://www.overleaf.com/read/mrgdvkxgkzrs). 
 
 I suggest only running through the entire notebook if you wish to create your own data. I have included in this repo many meta data in csv and pickle files 
 so that you mayy avoid rerunning all the code which takes a long time(about 3 days). 
